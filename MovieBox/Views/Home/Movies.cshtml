@@ -1,0 +1,27 @@
+﻿@model List<MovieBox.ViewModels.SortMovieViewModel>
+
+
+@{
+    ViewBag.Title = "Movies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movies</h2>
+
+
+
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <h2>@item.Movie.Name</h2>
+            <p>@item.Movie.Rating</p>
+            <p>@item.Movie.Category.Name</p>
+            <p>@item.Movie.Details</p>
+        </div>
+    }
+
+
+
+</div>
